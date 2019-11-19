@@ -1,5 +1,3 @@
-module github.com/PaesslerAG/gval
-
-require github.com/PaesslerAG/jsonpath v0.1.0
+module github.com/puppetlabs/paesslerag-gval
 
 go 1.13

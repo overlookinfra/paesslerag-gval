@@ -6,8 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/PaesslerAG/gval"
-	"github.com/PaesslerAG/jsonpath"
+	gval "github.com/puppetlabs/paesslerag-gval"
 )
 
 func Example() {
@@ -340,24 +339,6 @@ func ExampleEvaluable_EvalBool() {
 
 	// Output:
 	// yeah
-}
-
-func ExampleEvaluate_jsonpath() {
-
-	value, err := gval.Evaluate(`$["response-time"]`,
-		map[string]interface{}{
-			"response-time": 100,
-		},
-		jsonpath.Language(),
-	)
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	fmt.Print(value)
-
-	// Output:
-	// 100
 }
 
 func ExampleLanguage() {
